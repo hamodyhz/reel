@@ -1,0 +1,70 @@
+/* التصميم الأساسي */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: url('44.webp') no-repeat center center fixed;
+    background-size: cover;
+    color: #fff;
+}
+
+/* تعديل رأس الصفحة */
+header {
+    background-color: rgba(0, 0, 0, 0.7); /* خلفية شفافة */
+    color: #fff;
+    padding: 20px 0;
+    position: fixed; /* تثبيت في الأعلى */
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* تعديل محتوى الصفحة */
+main {
+    padding: 100px 20px 20px; /* إزاحة لتجنب تداخل مع الهيدر */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* مربعات الفيديو */
+.reel-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 400px; /* تحديد الحد الأقصى لعرض الفيديو */
+    background: rgba(0, 0, 0, 0.6); /* خلفية شفافة للمربع */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* الفيديو */
+.reel {
+    width: 100%;
+    aspect-ratio: 9 / 16; /* لضمان عرض الفيديو بالطول */
+    border-radius: 8px 8px 0 0;
+}
+
+/* مربع الإعلان */
+.ad-box {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 15px;
+    font-size: 18px;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+
+/* التأثير على الموبايل */
+@media screen and (max-width: 768px) {
+    .reel-container {
+        width: 100%; /* تأخذ العرض الكامل على الموبايل */
+    }
+}
